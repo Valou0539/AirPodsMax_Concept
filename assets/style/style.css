@@ -329,7 +329,7 @@ body .keypoints .keypoint p {
 @media screen and (max-width: 740px) {
   @keyframes headset-animation {
     0% {
-      transform: translate(70vw, -8vw) rotate(-38deg) scaleX(-1);
+      transform: translate(100vw, -8vw) rotate(-38deg) scaleX(-1);
       animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
     }
     45% {
