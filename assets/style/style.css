@@ -46,7 +46,10 @@ body {
     background-size: 100% 300px;
   }
 }
-body .topbar {
+body header {
+  overflow-x: hidden;
+}
+body header .topbar {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -65,48 +68,48 @@ body .topbar {
   z-index: 50;
 }
 @media screen and (max-width: 740px) {
-  body .topbar {
+  body header .topbar {
     padding: 0 16px;
   }
 }
-body .topbar .left ul {
+body header .topbar .left ul {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-body .topbar .left ul li a {
+body header .topbar .left ul li a {
   padding: 8px;
 }
-body .topbar .left ul li .logo {
+body header .topbar .left ul li .logo {
   width: 18px;
   height: 18px;
 }
 @media screen and (max-width: 1190px) {
-  body .topbar .left ul li:not(:first-child) {
+  body header .topbar .left ul li:not(:first-child) {
     display: none;
   }
 }
-body .topbar .right ul {
+body header .topbar .right ul {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-body .topbar .right ul .link-icon {
+body header .topbar .right ul .link-icon {
   padding: 4px;
   display: block;
 }
-body .topbar .right ul .link-icon img {
+body header .topbar .right ul .link-icon img {
   display: block;
   width: 20px;
   height: 20px;
 }
 @media screen and (max-width: 1190px) {
-  body .topbar .right ul .link-icon img {
+  body header .topbar .right ul .link-icon img {
     width: 17px;
     height: 17px;
   }
 }
-body .topbar .right ul .buy-button {
+body header .topbar .right ul .buy-button {
   padding: 4px 16px;
   border-radius: 1000px;
   background-color: #0071E3;
@@ -115,26 +118,26 @@ body .topbar .right ul .buy-button {
   margin-left: 4px;
 }
 @media screen and (max-width: 1190px) {
-  body .topbar .right ul .buy-button {
+  body header .topbar .right ul .buy-button {
     padding: 3px 12px;
     font-size: 14px;
     margin-left: 0;
   }
 }
-body .topbar .right ul .menu-button {
+body header .topbar .right ul .menu-button {
   display: none;
   margin-left: 8px;
 }
-body .topbar .right ul .menu-button button {
+body header .topbar .right ul .menu-button button {
   background-color: transparent;
   cursor: pointer;
 }
 @media screen and (max-width: 1190px) {
-  body .topbar .right ul .menu-button {
+  body header .topbar .right ul .menu-button {
     display: block;
   }
 }
-body .hero .hero-content {
+body header .hero .hero-content {
   width: 35%;
   margin-top: calc(20px + 14vw);
   margin-left: 12vw;
@@ -142,7 +145,7 @@ body .hero .hero-content {
   color: #FFFFFF;
 }
 @media screen and (max-width: 1000px) {
-  body .hero .hero-content {
+  body header .hero .hero-content {
     text-align: center;
     margin: 448px 16px 48px;
     width: calc(100% - 32px);
@@ -150,11 +153,11 @@ body .hero .hero-content {
   }
 }
 @media screen and (max-width: 740px) {
-  body .hero .hero-content {
+  body header .hero .hero-content {
     margin-top: 300px;
   }
 }
-body .hero .hero-content h1 {
+body header .hero .hero-content h1 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 7.5vw;
   letter-spacing: 2px;
@@ -163,37 +166,37 @@ body .hero .hero-content h1 {
   animation-duration: 1400ms;
 }
 @media screen and (max-width: 1000px) {
-  body .hero .hero-content h1 {
+  body header .hero .hero-content h1 {
     font-size: 80px;
     letter-spacing: 1px;
     filter: none;
   }
 }
 @media screen and (max-width: 740px) {
-  body .hero .hero-content h1 {
+  body header .hero .hero-content h1 {
     font-size: 64px;
   }
 }
-body .hero .hero-content p {
+body header .hero .hero-content p {
   font-size: 2vw;
   font-weight: 600;
   animation-name: subtitle-animation;
   animation-duration: 1400ms;
 }
 @media screen and (max-width: 1000px) {
-  body .hero .hero-content p {
+  body header .hero .hero-content p {
     font-size: 22px;
     max-width: 316px;
     margin: 0 auto;
   }
 }
 @media screen and (max-width: 740px) {
-  body .hero .hero-content p {
+  body header .hero .hero-content p {
     font-size: 18px;
     max-width: 280px;
   }
 }
-body .hero .hero-images-container {
+body header .hero .hero-images-container {
   position: absolute;
   top: -7vw;
   right: 128px;
@@ -201,46 +204,46 @@ body .hero .hero-images-container {
   height: auto;
 }
 @media screen and (max-width: 1190px) {
-  body .hero .hero-images-container {
+  body header .hero .hero-images-container {
     right: 170px;
   }
 }
 @media screen and (max-width: 1000px) {
-  body .hero .hero-images-container {
+  body header .hero .hero-images-container {
     right: calc(50% - 200px);
     top: -60px;
     width: 400px;
   }
 }
 @media screen and (max-width: 740px) {
-  body .hero .hero-images-container {
+  body header .hero .hero-images-container {
     right: calc(50% - 139px);
     top: -60px;
     width: 278px;
   }
 }
 @media screen and (min-width: 1260px) {
-  body .hero .hero-images-container {
+  body header .hero .hero-images-container {
     right: 15%;
   }
 }
-body .hero .hero-images-container img {
+body header .hero .hero-images-container img {
   animation-name: headset-animation;
   animation-duration: 1400ms;
   pointer-events: none;
   user-select: none;
 }
 @media screen and (max-width: 740px) {
-  body .hero .hero-images-container img {
+  body header .hero .hero-images-container img {
     transform: scaleX(-1);
   }
 }
-body .hero .hero-images-container .hero-image-back {
+body header .hero .hero-images-container .hero-image-back {
   z-index: 0;
   width: 100%;
   height: auto;
 }
-body .hero .hero-images-container .hero-image-front {
+body header .hero .hero-images-container .hero-image-front {
   position: absolute;
   top: 0;
   right: 0;
