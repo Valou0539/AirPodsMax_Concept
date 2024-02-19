@@ -1,0 +1,215 @@
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  src: url("fonts/Lato-SemiBold.ttf") format("truetype");
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  color: inherit;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+html, body {
+  width: 100%;
+  min-height: 500dvh;
+  background-color: #F3F1EC;
+  overflow-x: hidden;
+}
+
+body {
+  background-image: url("../img/background.png");
+  background-size: contain;
+  background-position: 0 80px;
+  background-repeat: no-repeat;
+}
+body .topbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 44px;
+  padding: 0 48px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  background-color: rgba(234, 255, 255, 0.4);
+  box-shadow: 0 0px 16px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(16px);
+  z-index: 50;
+}
+body .topbar .left ul {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+body .topbar .left ul li {
+  padding: 8px;
+}
+body .topbar .left ul li .logo {
+  width: 18px;
+  height: 18px;
+}
+body .topbar .right ul {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+body .topbar .right ul .link-icon {
+  padding: 4px;
+  display: block;
+}
+body .topbar .right ul .link-icon img {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+body .topbar .right ul .buy-button {
+  padding: 4px 16px;
+  border-radius: 1000px;
+  background-color: #0071E3;
+  font-size: 16px;
+  color: #FFFFFF;
+  margin-left: 4px;
+}
+body .hero .hero-content {
+  width: 35%;
+  margin-top: calc(20px + 14vw);
+  margin-left: 12vw;
+  margin-bottom: 17vw;
+  color: #FFFFFF;
+}
+body .hero .hero-content h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 7.5vw;
+  letter-spacing: 2px;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.2));
+  animation-name: title-animation;
+  animation-duration: 1400ms;
+}
+body .hero .hero-content p {
+  font-size: 2vw;
+  font-weight: 600;
+  animation-name: subtitle-animation;
+  animation-duration: 1400ms;
+}
+body .hero .hero-images-container {
+  position: absolute;
+  top: -7vw;
+  right: 128px;
+  width: 36vw;
+  height: auto;
+}
+@media screen and (min-width: 1260px) {
+  body .hero .hero-images-container {
+    right: 15%;
+  }
+}
+body .hero .hero-images-container img {
+  animation-name: headset-animation;
+  animation-duration: 1400ms;
+}
+body .hero .hero-images-container .hero-image-back {
+  z-index: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+body .hero .hero-images-container .hero-image-front {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: 100%;
+  z-index: 100;
+  pointer-events: none;
+}
+body .keypoints {
+  display: flex;
+  gap: 32px;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  padding: 0 16px;
+}
+body .keypoints .keypoint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 320px;
+  height: 386px;
+  padding: 48px 16px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.08), inset 2px 4px 8px rgba(255, 255, 255, 0.08);
+}
+body .keypoints .keypoint .keypoint-icon {
+  width: 128px;
+  height: 128px;
+}
+body .keypoints .keypoint h2 {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0 8px;
+  margin-bottom: 8px;
+}
+body .keypoints .keypoint p {
+  line-height: 1.4;
+}
+
+@keyframes headset-animation {
+  0% {
+    transform: translate(70vw, -8vw) rotate(-38deg);
+    animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
+  }
+  45% {
+    transform: translate(-1vw, 0) rotate(4deg);
+    animation-timing-function: ease-in-out;
+  }
+  73% {
+    transform: translate(1vw, 0) rotate(-2deg);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+    animation-timing-function: ease-in-out;
+  }
+}
+@keyframes title-animation {
+  0%, 45% {
+    transform: translateX(-8vw);
+    opacity: 0;
+  }
+  73%, 100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes subtitle-animation {
+  0%, 73% {
+    transform: translateX(2vw);
+    opacity: 0;
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
