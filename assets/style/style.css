@@ -46,9 +46,6 @@ body {
     background-size: 100% 300px;
   }
 }
-body header {
-  overflow: hidden;
-}
 body header .topbar {
   position: relative;
   display: flex;
