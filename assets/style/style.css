@@ -47,7 +47,7 @@ body {
   }
 }
 body header {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 body header .topbar {
   position: relative;
