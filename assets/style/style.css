@@ -31,7 +31,7 @@ html, body {
 }
 
 body {
-  background-image: url("../img/background.png");
+  background-image: url("../img/background.webp");
   background-size: contain;
   background-position: 0 80px;
   background-repeat: no-repeat;
@@ -226,6 +226,8 @@ body .hero .hero-images-container {
 body .hero .hero-images-container img {
   animation-name: headset-animation;
   animation-duration: 1400ms;
+  pointer-events: none;
+  user-select: none;
 }
 @media screen and (max-width: 740px) {
   body .hero .hero-images-container img {
@@ -244,7 +246,6 @@ body .hero .hero-images-container .hero-image-front {
   width: auto;
   height: 100%;
   z-index: 100;
-  pointer-events: none;
 }
 body .keypoints {
   display: flex;
