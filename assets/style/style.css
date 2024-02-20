@@ -153,6 +153,9 @@ body header .topbar .right ul .buy-button {
   color: #FFFFFF;
   margin-left: 4px;
 }
+body header .topbar .right ul .buy-button:hover {
+  background-color: #147CE5;
+}
 @media screen and (max-width: 1190px) {
   body header .topbar .right ul .buy-button {
     padding: 3px 12px;
