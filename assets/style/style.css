@@ -46,6 +46,35 @@ body {
     background-size: 100% 300px;
   }
 }
+body .loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F3F1EC;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .loader-container .loader {
+  width: 80%;
+  max-width: 400px;
+  height: 10px;
+  background-color: #FFFFFF;
+  border-radius: 100px;
+}
+body .loader-container .loader .loader-bar {
+  width: 0;
+  height: 100%;
+  background-color: #0071E3;
+  border-radius: 100px;
+  animation-name: loader-animation;
+  animation-duration: 60s;
+  animation-timing-function: cubic-bezier(0, 1, 0, 1);
+  animation-fill-mode: forwards;
+}
 body header .topbar {
   position: relative;
   display: flex;
@@ -76,6 +105,11 @@ body header .topbar .left ul {
 }
 body header .topbar .left ul li a {
   padding: 8px;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+body header .topbar .left ul li a:hover {
+  opacity: 1;
 }
 body header .topbar .left ul li .logo {
   width: 18px;
@@ -94,6 +128,11 @@ body header .topbar .right ul {
 body header .topbar .right ul .link-icon {
   padding: 4px;
   display: block;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+body header .topbar .right ul .link-icon:hover {
+  opacity: 1;
 }
 body header .topbar .right ul .link-icon img {
   display: block;
@@ -128,6 +167,11 @@ body header .topbar .right ul .menu-button {
 body header .topbar .right ul .menu-button button {
   background-color: transparent;
   cursor: pointer;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+body header .topbar .right ul .menu-button button:hover {
+  opacity: 1;
 }
 @media screen and (max-width: 1190px) {
   body header .topbar .right ul .menu-button {
@@ -308,6 +352,14 @@ body .keypoints .keypoint p {
   line-height: 1.4;
 }
 
+@keyframes loader-animation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
 @keyframes headset-animation {
   0% {
     transform: translate(70vw, -8vw) rotate(-38deg);

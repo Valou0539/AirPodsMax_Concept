@@ -35,6 +35,32 @@ body
     background-position: 0 13px
   @media screen and (max-width: 740px)
     background-size: 100% 300px
+  .loader-container
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: #F3F1EC
+    z-index: 1000
+    display: flex
+    justify-content: center
+    align-items: center
+    .loader
+      width: 80%
+      max-width: 400px
+      height: 10px
+      background-color: #FFFFFF
+      border-radius: 100px
+      .loader-bar
+        width: 0
+        height: 100%
+        background-color: #0071E3
+        border-radius: 100px
+        animation-name: loader-animation
+        animation-duration: 60s
+        animation-timing-function: cubic-bezier(0, 1, 0, 1)
+        animation-fill-mode: forwards
   header
     .topbar
       position: relative
@@ -63,6 +89,10 @@ body
           li
             a
               padding: 8px
+              opacity: .9
+              transition: opacity .3s
+              &:hover
+                  opacity: 1
             .logo
               width: 18px
               height: 18px
@@ -77,6 +107,10 @@ body
           .link-icon
             padding: 4px
             display: block
+            opacity: .9
+            transition: opacity .3s
+            &:hover
+              opacity: 1
             img
               display: block
               width: 20px
@@ -101,6 +135,10 @@ body
             button
               background-color: transparent
               cursor: pointer
+              opacity: .9
+              transition: opacity .3s
+              &:hover
+                opacity: 1
             @media screen and (max-width: 1190px)
               display: block
     .hero
@@ -224,6 +262,11 @@ body
       p
         line-height: 1.4
 
+@keyframes loader-animation
+  0%
+    width: 0
+  100%
+    width: 100%
 
 @keyframes headset-animation
   0%
